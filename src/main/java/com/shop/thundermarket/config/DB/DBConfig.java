@@ -2,6 +2,7 @@ package com.shop.thundermarket.config.DB;
 
 import javax.sql.DataSource;
 
+import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
+@RequiredArgsConstructor
 public class DBConfig {
 
-    @Autowired
-    private ThunderDataSource globalPropertySource;
+    private final ThunderDataSource globalPropertySource;
 
     @Bean
     @Primary
