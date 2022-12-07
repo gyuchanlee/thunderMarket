@@ -14,10 +14,10 @@ public class TestController {
     
     @Autowired
     TestMapper mapper;
-    
+
     @ResponseBody
     @RequestMapping("/memberInfo")
-    public List<Map<String, String>> memberInfo(Model model) {
+    public List<Map<?, ?>> memberInfo() {
         return mapper.memberInfo();
     }
 
