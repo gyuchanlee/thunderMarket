@@ -19,13 +19,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/**","/css/**","/images/**","/js/**","/h2-console/**").permitAll()
                 .anyRequest().authenticated()
-//                .and()
-//                .formLogin()
-//                .successForwardUrl("/")
-//                .failureForwardUrl("/login")
-//                .and()
-//                .logout()
-//                .logoutSuccessUrl("/")
+                .and()
+                .formLogin()
+                .successForwardUrl("/")
+                .failureForwardUrl("/login")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/")
         ;
         return http.build();
     }
