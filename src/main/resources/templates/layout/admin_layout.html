@@ -26,12 +26,23 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .sidebar {
+            float: left;
+        }
+
+        .contents {
+            float: right;
+        }
+    </style>
+
 </head>
 <body>
-    
     <div>
-
         <th:block th:replace="~{fragments/admin_header :: admin_header}"></th:block>
+
+        <th:block th:replace="~{fragments/admin_sider :: admin_sider}"></th:block>
 
         <th:block layout:fragment="content"></th:block>
 
