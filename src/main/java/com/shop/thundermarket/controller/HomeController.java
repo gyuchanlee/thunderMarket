@@ -20,4 +20,10 @@ public class HomeController {
         return "test/test";
     }
 
+    @GetMapping("/admin")
+    public String adminPage() {
+        log.info("admin page controller");
+        return "admin/admin";
+    }
+
 }
